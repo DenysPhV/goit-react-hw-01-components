@@ -1,5 +1,4 @@
-export default function Profile(user) {
-  const { name, avatar, tag, location, stats } = user; //деструктуризация, ее можно вставить на место пропса user
+export default function Profile({ name, avatar, tag, location, stats }) {
   return (
     <div>
       <div>
