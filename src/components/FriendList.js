@@ -1,10 +1,14 @@
-export default function FriendList({ avatar, name, isOnline }) {
-  // class="friend-list"
-  <ul>
-    <li>
-      <span>{isOnline}</span>
-      <img src={avatar} alt={name} width="48" />
-      <p>{name}</p>
-    </li>
-  </ul>;
+import FriendListItem from './FriendListItem';
+console.log(FriendListItem);
+
+export default function FriendList({ friends }) {
+  return (
+    <ul>
+      {friends.map(({ avatar, name, isOnline, id }) => (
+        <li key={id}>
+          {<FriendListItem avatar={avatar} name={name} isOnline={isOnline} />}
+        </li>
+      ))}
+    </ul>
+  );
 }
