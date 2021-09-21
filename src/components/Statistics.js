@@ -1,7 +1,10 @@
-export default function Statistics({ id, label, percentage }) {
+import PropTypes from 'prop-types';
+
+export default function Statistics(props) {
+  const { title = 'Upload stats', label, percentage } = props;
   return (
     <section>
-      <h2>{id}</h2>
+      <h2>{title}</h2>
 
       <ul>
         <li>
@@ -24,3 +27,7 @@ export default function Statistics({ id, label, percentage }) {
     </section>
   );
 }
+
+Statistics.PropTypes = {
+  title: PropTypes.string,
+};
