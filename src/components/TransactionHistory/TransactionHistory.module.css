@@ -1,0 +1,32 @@
+tbody {
+  text-align: center;
+}
+
+.transactionHistory {
+  width: 800px;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+
+.title {
+  height: 50px;
+
+  background-color: #3db3f8;
+}
+
+.label {
+  color: #ffffff;
+}
+
+.item {
+  height: 50px;
+  color: #808080;
+  background-color: #ffffff;
+}
+
+.item:nth-child(2n) {
+  background-color: rgba(207, 205, 205, 0.6);
+}
