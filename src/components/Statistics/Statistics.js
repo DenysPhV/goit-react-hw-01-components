@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import StatisticsItem from './StatisticsItem';
 import s from './Statistics.module.css';
 
 export default function Statistics({ title, stats }) {
@@ -7,16 +8,14 @@ export default function Statistics({ title, stats }) {
       {title && <h2 className={s.title}>{title}</h2>}
 
       <ul className={s.list}>
-        {/* тут я рендерю коллекцию */}
-        {stats.map((statEl) => (
-          <li
-            key={statEl.id}
-            className={s.item}
-            style={{ backgroundColor: randomColor() }}
-          >
-            <span className={s.label}>{statEl.label}</span>
-            <span className={s.percentage}>{statEl.percentage}%</span>
-          </li>
+        {/* тут я передаю и перебираю коллекцию из StatisticsItem*/}
+        {stats.map(({ id, label, percentage, backgroundColor }) => (
+          <StatisticsItem
+            key={id}
+            label={label}
+            percentage={percentage}
+            backgroundColor={{ backgroundColor: randomColor() }}
+          />
         ))}
       </ul>
     </section>

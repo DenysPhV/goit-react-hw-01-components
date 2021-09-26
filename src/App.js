@@ -21,7 +21,7 @@ export default function App() {
         stats={user.stats}
       />
       {/* статистика */}
-      {/* <Statistics title="Upload stats" stats={statisticalData} /> */}
+      <Statistics title="Upload stats" stats={statisticalData} />
       <Statistics stats={statisticalData} />
       {/*список друзей */}
       <FriendList friends={friends} />
