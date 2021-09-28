@@ -22,10 +22,6 @@ export default function Statistics({ title, stats }) {
   );
 }
 
-Statistics.defaultProps = {
-  title: 'Upload stats',
-};
-
 Statistics.propTypes = {
   title: PropTypes.string,
   // Массив объектов конкретного типа использую там где MAP
